@@ -10,7 +10,10 @@
 //---------
 /*
  需要导入CoreLocation.framework框架
- 需要在真机开启定位
+ info.plist中添加
+ Privacy - Location When In Use Usage Description
+ Privacy - Location Always Usage Description
+ Privacy - Location Always and When In Use Usage Description
  */
 import UIKit
 import CoreLocation
@@ -28,16 +31,19 @@ class ZZLocaionViewController: ZZBaseViewController, CLLocationManagerDelegate{
         super.viewWillAppear(animated)
         self.showEventsAcessDeniedAlert()
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setView()
     }
     func setView(){
         self.title = "定位"
+        //初始化定位
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest //精准度
-        locationManager.requestAlwaysAuthorization() // 发送定位请求
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest//精准度
+        locationManager.requestAlwaysAuthorization()//发送开启定位的请求
         
         
         
@@ -52,25 +58,27 @@ class ZZLocaionViewController: ZZBaseViewController, CLLocationManagerDelegate{
         btn.modificationButton(title: "定位", BGColor: .green)
         btn.addTarget(self, action: #selector(findlocation), for: .touchUpInside)
         self.view.addSubview(visual)
-        self.view.addSubview(lab)
         self.view.addSubview(btn)
+        self.view.addSubview(lab)
+        
         
     }
     
     @objc func findlocation(){
-        if CLLocationManager.locationServicesEnabled(){
-            locationManager.startUpdatingHeading()
-        }else{
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }else {
             locationManager.requestAlwaysAuthorization()
         }
     }
+    //定位失败
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        lab.text = "error:\(error.localizedDescription)"
+        lab.text = "ERROR:"+error.localizedDescription
     }
-    
+    //定位成功
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let newlocation = locations.first{
-            CLGeocoder().reverseGeocodeLocation(newlocation, completionHandler: { (pms, err) in
+        if let newLocal = locations.first {
+            CLGeocoder().reverseGeocodeLocation(newLocal, completionHandler: { (pms, err) in
                 if (pms?.last?.location?.coordinate) != nil {
                     manager.stopUpdatingLocation()//停止定位，节省电量，只获取一次定位
                     
