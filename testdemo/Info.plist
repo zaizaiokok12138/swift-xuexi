@@ -24,6 +24,13 @@
 	<string>LaunchScreen</string>
 	<key>NSCameraUsageDescription</key>
 	<string>用于二维码扫描！</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>是否使用定位</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>允许在后台获取GPS的描述
+这样就可以，实现上面效果图的效果了</string>
+	<key>Privacy - NSLocationWhenInUseDescription</key>
+	<string>允许在前台获取GPS的描述</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

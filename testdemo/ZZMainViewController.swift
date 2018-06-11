@@ -50,23 +50,25 @@ extension ZZMainViewController:UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
+        if indexPath.row == 0{//二维码扫描
             let mainvc = ZZCodeViewController()
             self.navigationController?.pushViewController(mainvc, animated: true)
-        }else if indexPath.row == 1{
+        }else if indexPath.row == 1{//FMDB
             let mainvc = ZZFMDBViewController()
             self.navigationController?.pushViewController(mainvc, animated: true)
-        }else if indexPath.row == 2{
+        }else if indexPath.row == 2{//键盘高度
+            let mainvc = ZZKeyboardViewController()
+            self.navigationController?.pushViewController(mainvc, animated: true)
+        }else if indexPath.row == 3{//定位
+            let mainvc = ZZLocaionViewController()
+            self.navigationController?.pushViewController(mainvc, animated: true)
+        }else if indexPath.row == 4{//动画为背景
             
-        }else if indexPath.row == 3{
+        }else if indexPath.row == 5{//本地播放音乐
             
-        }else if indexPath.row == 4{
+        }else if indexPath.row == 6{//语音
             
-        }else if indexPath.row == 5{
-            
-        }else if indexPath.row == 6{
-            
-        }else if indexPath.row == 7{
+        }else if indexPath.row == 7{//模糊搜索
             
         }
     }

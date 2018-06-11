@@ -20,6 +20,10 @@
 		A587416720CA51CE0077D1A0 /* ZZCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587416620CA51CE0077D1A0 /* ZZCodeViewController.swift */; };
 		A587416A20CA52ED0077D1A0 /* ZZcanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587416920CA52ED0077D1A0 /* ZZcanViewController.swift */; };
 		A587416C20CA52FA0077D1A0 /* ZZImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587416B20CA52FA0077D1A0 /* ZZImageViewController.swift */; };
+		A5F496B020CE3CC9003EDB04 /* ZZKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F496AF20CE3CC9003EDB04 /* ZZKeyboardViewController.swift */; };
+		A5F496B220CE3CDB003EDB04 /* ZZExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F496B120CE3CDB003EDB04 /* ZZExtension.swift */; };
+		A5F496B520CE4408003EDB04 /* ZZLocaionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F496B420CE4408003EDB04 /* ZZLocaionViewController.swift */; };
+		A5F496B720CE44A1003EDB04 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F496B620CE44A1003EDB04 /* CoreLocation.framework */; };
 		E267716309595ED5E9569AC3 /* Pods_testdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304DA62A41487AC0A5F817EC /* Pods_testdemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,10 @@
 		A587416620CA51CE0077D1A0 /* ZZCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZCodeViewController.swift; sourceTree = "<group>"; };
 		A587416920CA52ED0077D1A0 /* ZZcanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZcanViewController.swift; sourceTree = "<group>"; };
 		A587416B20CA52FA0077D1A0 /* ZZImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZImageViewController.swift; sourceTree = "<group>"; };
+		A5F496AF20CE3CC9003EDB04 /* ZZKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZKeyboardViewController.swift; sourceTree = "<group>"; };
+		A5F496B120CE3CDB003EDB04 /* ZZExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZExtension.swift; sourceTree = "<group>"; };
+		A5F496B420CE4408003EDB04 /* ZZLocaionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZLocaionViewController.swift; sourceTree = "<group>"; };
+		A5F496B620CE44A1003EDB04 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D44DB0AAE01753CB2BDF70AB /* Pods-testdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-testdemo/Pods-testdemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F496B720CE44A1003EDB04 /* CoreLocation.framework in Frameworks */,
 				E267716309595ED5E9569AC3 /* Pods_testdemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +69,7 @@
 		095A7F5C65273EFDB81E5F80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5F496B620CE44A1003EDB04 /* CoreLocation.framework */,
 				304DA62A41487AC0A5F817EC /* Pods_testdemo.framework */,
 			);
 			name = Frameworks;
@@ -103,6 +113,8 @@
 				A587416120CA50C40077D1A0 /* ZZMainViewController.swift */,
 				A587416820CA527F0077D1A0 /* code */,
 				A557326F20CA6A41004E1002 /* FMDB */,
+				A5F496AE20CE3C9F003EDB04 /* keyboard */,
+				A5F496B320CE43F6003EDB04 /* location */,
 				A587413320CA4D440077D1A0 /* Main.storyboard */,
 				A587413620CA4D440077D1A0 /* Assets.xcassets */,
 				A587413820CA4D440077D1A0 /* LaunchScreen.storyboard */,
@@ -119,6 +131,23 @@
 				A587416B20CA52FA0077D1A0 /* ZZImageViewController.swift */,
 			);
 			path = code;
+			sourceTree = "<group>";
+		};
+		A5F496AE20CE3C9F003EDB04 /* keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A5F496AF20CE3CC9003EDB04 /* ZZKeyboardViewController.swift */,
+				A5F496B120CE3CDB003EDB04 /* ZZExtension.swift */,
+			);
+			path = keyboard;
+			sourceTree = "<group>";
+		};
+		A5F496B320CE43F6003EDB04 /* location */ = {
+			isa = PBXGroup;
+			children = (
+				A5F496B420CE4408003EDB04 /* ZZLocaionViewController.swift */,
+			);
+			path = location;
 			sourceTree = "<group>";
 		};
 		E7F99A8795249D77CC3978DE /* Pods */ = {
@@ -248,11 +277,14 @@
 				A587416020CA50AC0077D1A0 /* ZZBaseViewController.swift in Sources */,
 				A587416A20CA52ED0077D1A0 /* ZZcanViewController.swift in Sources */,
 				A587413020CA4D440077D1A0 /* AppDelegate.swift in Sources */,
+				A5F496B220CE3CDB003EDB04 /* ZZExtension.swift in Sources */,
 				A557327120CA6B2A004E1002 /* ZZFMDBManager.swift in Sources */,
 				A587416C20CA52FA0077D1A0 /* ZZImageViewController.swift in Sources */,
+				A5F496B520CE4408003EDB04 /* ZZLocaionViewController.swift in Sources */,
 				A587415F20CA50AC0077D1A0 /* ZZBaseNavigationController.swift in Sources */,
 				A587416520CA51470077D1A0 /* config.swift in Sources */,
 				A587416220CA50C40077D1A0 /* ZZMainViewController.swift in Sources */,
+				A5F496B020CE3CC9003EDB04 /* ZZKeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
