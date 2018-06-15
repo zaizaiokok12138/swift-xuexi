@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A557327120CA6B2A004E1002 /* ZZFMDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557327020CA6B2A004E1002 /* ZZFMDBManager.swift */; };
 		A557327320CA6B38004E1002 /* ZZFMDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A557327220CA6B38004E1002 /* ZZFMDBViewController.swift */; };
+		A582A49420CE746300BEDD5E /* ZZVoiceViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582A49320CE746300BEDD5E /* ZZVoiceViewcontroller.swift */; };
 		A587413020CA4D440077D1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587412F20CA4D440077D1A0 /* AppDelegate.swift */; };
 		A587413520CA4D440077D1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A587413320CA4D440077D1A0 /* Main.storyboard */; };
 		A587413720CA4D440077D1A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A587413620CA4D440077D1A0 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		62648E3FEF90AB4433CCCAB1 /* Pods-testdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testdemo/Pods-testdemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A557327020CA6B2A004E1002 /* ZZFMDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZFMDBManager.swift; sourceTree = "<group>"; };
 		A557327220CA6B38004E1002 /* ZZFMDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZFMDBViewController.swift; sourceTree = "<group>"; };
+		A582A49320CE746300BEDD5E /* ZZVoiceViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZVoiceViewcontroller.swift; sourceTree = "<group>"; };
 		A587412C20CA4D440077D1A0 /* testdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A587412F20CA4D440077D1A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A587413420CA4D440077D1A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		A582A49220CE744A00BEDD5E /* voice */ = {
+			isa = PBXGroup;
+			children = (
+				A582A49320CE746300BEDD5E /* ZZVoiceViewcontroller.swift */,
+			);
+			path = voice;
+			sourceTree = "<group>";
+		};
 		A587412320CA4D440077D1A0 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 				A557326F20CA6A41004E1002 /* FMDB */,
 				A5F496AE20CE3C9F003EDB04 /* keyboard */,
 				A5F496B320CE43F6003EDB04 /* location */,
+				A582A49220CE744A00BEDD5E /* voice */,
 				A587413320CA4D440077D1A0 /* Main.storyboard */,
 				A587413620CA4D440077D1A0 /* Assets.xcassets */,
 				A587413820CA4D440077D1A0 /* LaunchScreen.storyboard */,
@@ -283,6 +294,7 @@
 				A5F496B520CE4408003EDB04 /* ZZLocaionViewController.swift in Sources */,
 				A587415F20CA50AC0077D1A0 /* ZZBaseNavigationController.swift in Sources */,
 				A587416520CA51470077D1A0 /* config.swift in Sources */,
+				A582A49420CE746300BEDD5E /* ZZVoiceViewcontroller.swift in Sources */,
 				A587416220CA50C40077D1A0 /* ZZMainViewController.swift in Sources */,
 				A5F496B020CE3CC9003EDB04 /* ZZKeyboardViewController.swift in Sources */,
 			);

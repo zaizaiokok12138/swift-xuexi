@@ -30,6 +30,10 @@
 	<string>始终允许</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>始终允许</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>识别录音</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>读取录音</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

@@ -49,6 +49,7 @@ extension ZZMainViewController:UITableViewDelegate, UITableViewDataSource{
         cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{//二维码扫描
             let mainvc = ZZCodeViewController()
@@ -67,7 +68,13 @@ extension ZZMainViewController:UITableViewDelegate, UITableViewDataSource{
         }else if indexPath.row == 5{//本地播放音乐
             
         }else if indexPath.row == 6{//语音
-            
+            if #available(iOS 10.0, *) {
+                let mainvc = ZZVoiceViewcontroller()
+                self.navigationController?.pushViewController(mainvc, animated: true)
+            } else {
+                // Fallback on earlier versions
+            }
+           
         }else if indexPath.row == 7{//模糊搜索
             
         }
